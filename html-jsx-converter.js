@@ -39,16 +39,3 @@ function JSXtoHTML(inputData) {
     return htmlOutput;
 }
 
-// For testing HTML to JSX
-function htmlToJSX2() {
-    const inputData = document.getElementById("htmlInput").value;
-    const output = htmlToJSX(inputData);
-    document.getElementById("output").value = output;
-}
-
-// For testing JSX to HTML
-function JSXtoHTML2() {
-    const inputData = document.getElementById("htmlInput").value;
-    const output = JSXtoHTML(inputData);
-    document.getElementById("output").value = output;
-}
