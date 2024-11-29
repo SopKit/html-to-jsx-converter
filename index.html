@@ -1,65 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML to JSX Converter</title>
+    <title>HTML to JSX Converter - Simplify Your React Development</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="HTML to JSX Converter: Convert HTML to React JSX or JSX to HTML online effortlessly. Perfect for React developers to speed up workflows!">
+    <meta name="keywords" content="HTML to JSX Converter, JSX to HTML, React JSX, Online Code Converter, HTML Converter for React, React Development Tools">
+    <meta name="author" content="SopKit">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HTML to JSX Converter - Simplify Your React Development">
+    <meta property="og:description" content="Use the HTML to JSX Converter tool to convert HTML code into React-compatible JSX or vice versa online. Improve efficiency for React developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sopkit.github.io/html-to-jsx-converter">
+    <meta property="og:image" content="https://sopkit.github.io/images/html-jsx-converter-preview.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HTML to JSX Converter",
+      "url": "https://sopkit.github.io/html-to-jsx-converter",
+      "description": "An online tool for React developers to convert HTML to JSX or JSX to HTML effortlessly.",
+      "keywords": "HTML to JSX Converter, React JSX, Code Converter, Online Tool",
+      "creator": {
+        "@type": "Organization",
+        "name": "SopKit"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://sopkit.github.io/favicon.ico" type="image/x-icon">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>HTML to JSX Converter</h1>
-        <textarea id="htmlInput" placeholder="Paste your HTML or JSX here"></textarea>
-        <button onclick="htmlToJSX2()">HTML to JSX</button>
-        <button onclick="JSXtoHTML2()">JSX to HTML</button>
-        <textarea id="output" placeholder="Converted code will appear here" readonly></textarea>
-    </div>
+    <header>
+        <div class="header-container">
+            <h1>HTML to JSX Converter</h1>
+            <p>Effortlessly transform your HTML code into React-compatible JSX or convert JSX back to HTML. Ideal for React developers looking to streamline their workflow.</p>
+            <a href="https://sopkit.github.io" class="back-btn">← Back to Homepage</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Convert HTML to JSX or JSX to HTML</h2>
+            <p>Our **HTML to JSX Converter** is the ultimate tool for React developers. Paste your HTML or JSX code below and click the appropriate button to instantly convert it. Whether you're building a React project or simply exploring JSX, this tool is your go-to resource.</p>
+
+            <textarea id="htmlInput" placeholder="Paste your HTML or JSX code here..."></textarea>
+
+            <div class="button-group">
+                <button onclick="htmlToJSX2()">Convert HTML to JSX</button>
+                <button onclick="JSXtoHTML2()">Convert JSX to HTML</button>
+            </div>
+
+            <textarea id="output" placeholder="Converted code will appear here" readonly></textarea>
+        </div>
+
+        <section class="features">
+            <h2>Why Use Our HTML to JSX Converter?</h2>
+            <ul>
+                <li>Lightning-fast conversion of HTML to JSX or JSX to HTML.</li>
+                <li>Perfect for React developers, designers, and students.</li>
+                <li>Free and easy-to-use tool, accessible anywhere online.</li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="question">
+                <h3>What is JSX?</h3>
+                <p>JSX (JavaScript XML) is a syntax extension for JavaScript used in React. It allows developers to write HTML-like code that transforms into JavaScript.</p>
+            </div>
+            <div class="question">
+                <h3>How does this tool work?</h3>
+                <p>Our tool parses the input code and applies syntax rules to convert it into the desired format. It works seamlessly for React developers.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 SopKit. All rights reserved. | <a href="https://sopkit.github.io">Visit Homepage</a></p>
+    </footer>
+
     <script src="html-jsx-converter.js"></script>
     <script>
-      // For testing HTML to JSX
-function htmlToJSX2() {
-    const inputData = document.getElementById("htmlInput").value;
-    const output = htmlToJSX(inputData);
-    document.getElementById("output").value = output;
+        // Function: Convert HTML to JSX
+        function htmlToJSX2() {
+            const inputData = document.getElementById("htmlInput").value;
+            const output = htmlToJSX(inputData);
+            document.getElementById("output").value = output;
+        }
+
+        // Function: Convert JSX to HTML
+        function JSXtoHTML2() {
+            const inputData = document.getElementById("htmlInput").value;
+            const output = JSXtoHTML(inputData);
+            document.getElementById("output").value = output;
+        }
+    </script>
+    <style>
+        /* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
 }
 
-// For testing JSX to HTML
-function JSXtoHTML2() {
-    const inputData = document.getElementById("htmlInput").value;
-    const output = JSXtoHTML(inputData);
-    document.getElementById("output").value = output;
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
 }
-    </script>
-      <style>
-        body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        }
-        
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        textarea {
-            width: 100%;
-            height: 200px;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-        
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: #0056b3;
-        }
-    
-      </style>
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Textarea Styles */
+textarea {
+    width: 100%;
+    height: 200px;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Features Section */
+.features {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f1f1f1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features ul li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
 </body>
+
 </html>
